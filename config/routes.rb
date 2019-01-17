@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'items/item'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  root to: 'items#index'
+  root to: 'pages#home'
 
-    resources :items do
-    end
+  get '/items/index', to: 'items#index', as: 'items'
 
 end
