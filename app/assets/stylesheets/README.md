@@ -71,7 +71,7 @@ Look at your main `application.scss` file to see how SCSS files are imported. Th
 // Your CSS partials
 @import "layouts/index";
 @import "components/index";
-@import "pages/index";
+@import "items/index";
 ```
 
 For every folder (**`components`**, **`layouts`**, **`pages`**), there is one `_index.scss` partial which is responsible for importing all the other partials of its folder.
@@ -79,8 +79,8 @@ For every folder (**`components`**, **`layouts`**, **`pages`**), there is one `_
 **Example 1**: Let's say you add a new `_contact.scss` file in **`pages`** then modify `pages/_index.scss` as:
 
 ```scss
-// pages/_index.scss
-@import "home";
+// items/_index.scss
+@import "index";
 @import "contact";
 ```
 
