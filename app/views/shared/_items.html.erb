@@ -1,0 +1,14 @@
+  <div class="row">
+    <% @items.each do |item| %>
+
+    <div class="col-xs-12 col-sm-4">
+
+          <div class="card" style="margin-top: 10px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/350/300'); height: 270px;">
+
+        <div class="card-description">
+          <h2><%= link_to item.name.capitalize, items_path(item) %></h2>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
